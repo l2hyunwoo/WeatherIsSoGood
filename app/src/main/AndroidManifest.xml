@@ -3,13 +3,15 @@
     package="co.spoonradio.recruit">
 
     <application
+        android:name=".WeathercastApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.SpoonWeathercast">
-        <activity android:name=".MainActivity">
+        <activity android:name=".presentation.detail.DetailActivity" />
+        <activity android:name=".presentation.search.SearchActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
