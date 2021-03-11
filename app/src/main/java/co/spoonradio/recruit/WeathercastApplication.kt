@@ -2,7 +2,9 @@ package co.spoonradio.recruit
 
 import android.app.Application
 import co.spoonradio.recruit.util.PixelRatio
+import dagger.hilt.android.HiltAndroidApp
 
+@HiltAndroidApp
 class WeathercastApplication : Application() {
     override fun onCreate() {
         super.onCreate()
