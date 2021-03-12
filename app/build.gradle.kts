@@ -16,6 +16,7 @@ android {
         versionCode(Apps.versionCode)
         versionName(Apps.versionName)
         buildConfigField("String", "WEATHER_API_KEY", properties["WEATHER_API_KEY"].toString())
+        buildConfigField("String", "WEATHER_BASE_URL", properties["WEATHER_BASE_URL"].toString())
 
         testInstrumentationRunner("androidx.test.runner.AndroidJUnitRunner")
     }

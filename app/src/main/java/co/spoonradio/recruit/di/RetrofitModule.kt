@@ -28,7 +28,7 @@ object RetrofitModule {
     @Provides
     @Singleton
     fun provideRetrofitObject(): Retrofit {
-        return Retrofit.Builder().baseUrl(BuildConfig.WEATHER_API_KEY).client(provideClient())
+        return Retrofit.Builder().baseUrl(BuildConfig.WEATHER_BASE_URL).client(provideClient())
             .addConverterFactory(GsonConverterFactory.create()).build()
     }
 }
