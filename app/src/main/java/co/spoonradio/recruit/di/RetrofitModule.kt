@@ -1,6 +1,5 @@
 package co.spoonradio.recruit.di
 
-import co.spoonradio.recruit.BuildConfig
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -15,6 +14,7 @@ import javax.inject.Singleton
 @Module
 @InstallIn(SingletonComponent::class)
 object RetrofitModule {
+    private const val WEATHER_BASE_URL = "http://api.openweathermap.org/data/2.5/"
     private fun provideLoggingInterceptor() =
         HttpLoggingInterceptor().apply { level = HttpLoggingInterceptor.Level.BODY }
 
@@ -28,7 +28,7 @@ object RetrofitModule {
     @Provides
     @Singleton
     fun provideRetrofitObject(): Retrofit {
-        return Retrofit.Builder().baseUrl(BuildConfig.WEATHER_BASE_URL).client(provideClient())
+        return Retrofit.Builder().baseUrl(WEATHER_BASE_URL).client(provideClient())
             .addConverterFactory(GsonConverterFactory.create()).build()
     }
 }
