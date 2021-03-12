@@ -62,6 +62,12 @@ dependencies {
     implementation(AndroidXDependencies.activityKtx)
     implementation(AndroidXDependencies.fragmentKtx)
 
+    // Retrofit & OkHttp
+    implementation(ThirdPartyDependencies.okHttp)
+    implementation(ThirdPartyDependencies.okHttpInterceptor)
+    implementation(ThirdPartyDependencies.retrofit)
+    implementation(ThirdPartyDependencies.retrofitGsonConverter)
+
     testImplementation(TestDependencies.jUnit)
     androidTestImplementation(TestDependencies.androidTest)
     androidTestImplementation(TestDependencies.espresso)
