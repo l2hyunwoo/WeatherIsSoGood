@@ -10,6 +10,10 @@ object AndroidXDependencies {
     const val hilt = "com.google.dagger:hilt-android:${Versions.hilt_version}"
     const val viewModelKtx =
         "androidx.lifecycle:lifecycle-viewmodel-ktx:${Versions.lifecycle_ktx_version}"
+    const val activityKtx =
+        "androidx.activity:activity-ktx:${Versions.activity_ktx}"
+    const val fragmentKtx =
+        "androidx.fragment:fragment-ktx:${Versions.fragment_ktx}"
 }
 
 object TestDependencies {
