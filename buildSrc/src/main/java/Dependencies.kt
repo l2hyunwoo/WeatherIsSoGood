@@ -8,13 +8,11 @@ object AndroidXDependencies {
     const val constraintLayout =
         "androidx.constraintlayout:constraintlayout:${Versions.constraint_layout_version}"
     const val hilt = "com.google.dagger:hilt-android:${Versions.hilt_version}"
-    const val navigationFragment = "androidx.navigation:navigation-fragment-ktx:${Versions.nav_verion}"
-    const val navigationUI = "androidx.navigation:navigation-ui-ktx:${Versions.nav_verion}"
 }
 
 object TestDependencies {
     const val jUnit = "junit:junit:${Versions.junit_version}"
-    const val androidTest = "androidx.test.ext:junit:${Versions.androidtest_version}"
+    const val androidTest = "androidx.test.ext:junit:${Versions.android_test_version}"
     const val espresso = "androidx.test.espresso:espresso-core:${Versions.espresso_version}"
 }
 
@@ -29,4 +27,8 @@ object KaptDependencies {
 
 object ClassPathPlugins {
     const val hilt = "com.google.dagger:hilt-android-gradle-plugin:${Versions.hilt_version}"
+}
+
+object ThirdPartyDependencies {
+    const val gson = "com.google.code.gson:gson:${Versions.gson_version}"
 }

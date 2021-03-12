@@ -43,6 +43,36 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/co/spoonradio/recruit/data/datasource/local/CityDataSource.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/co/spoonradio/recruit/data/datasource/local/CityDataSourceImpl.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/co/spoonradio/recruit/data/entity/City.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/co/spoonradio/recruit/data/entity/Coord.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/co/spoonradio/recruit/data/entity/Location.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/co/spoonradio/recruit/di/LocationModule.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/app/src/main/java/co/spoonradio/recruit/presentation/MainActivity.kt">
           <value>
             <set />
@@ -99,6 +129,16 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/buildSrc/build.gradle.kts">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/buildSrc/src/main/java/Dependencies.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/buildSrc/src/main/java/Versions.kt">
           <value>
             <set />
           </value>
