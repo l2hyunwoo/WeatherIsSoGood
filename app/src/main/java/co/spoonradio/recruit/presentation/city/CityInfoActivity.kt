@@ -1,4 +1,4 @@
-package co.spoonradio.recruit.presentation.search
+package co.spoonradio.recruit.presentation.city
 
 import android.os.Bundle
 import androidx.activity.viewModels

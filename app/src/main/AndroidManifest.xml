@@ -11,7 +11,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SpoonWeathercast">
         <activity android:name=".presentation.detail.DetailActivity" />
-        <activity android:name=".presentation.search.CityInfoActivity">
+        <activity android:name=".presentation.city.CityInfoActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

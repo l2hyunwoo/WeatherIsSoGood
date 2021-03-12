@@ -98,6 +98,26 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/co/spoonradio/recruit/presentation/city/CityInfoActivity.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/co/spoonradio/recruit/presentation/city/CityViewModel.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/co/spoonradio/recruit/presentation/city/adapter/CItyAdapter.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/co/spoonradio/recruit/presentation/city/adapter/CityAdapter.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/app/src/main/java/co/spoonradio/recruit/presentation/detail/DetailActivity.kt">
           <value>
             <set />

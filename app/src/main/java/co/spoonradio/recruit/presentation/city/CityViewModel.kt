@@ -1,4 +1,4 @@
-package co.spoonradio.recruit.presentation.search
+package co.spoonradio.recruit.presentation.city
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
