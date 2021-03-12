@@ -48,8 +48,18 @@ dependencies {
     implementation(AndroidXDependencies.coreKtx)
     implementation(MaterialDesignDependencies.materialDesign)
     implementation(AndroidXDependencies.constraintLayout)
+
+    // Dagger-Hilt
     implementation(AndroidXDependencies.hilt)
     kapt(KaptDependencies.hiltCompiler)
+
+    // Gson
+    implementation(ThirdPartyDependencies.gson)
+
+    // KTX
+    implementation(AndroidXDependencies.viewModelKtx)
+    implementation(AndroidXDependencies.activityKtx)
+    implementation(AndroidXDependencies.fragmentKtx)
 
     testImplementation(TestDependencies.jUnit)
     androidTestImplementation(TestDependencies.androidTest)
