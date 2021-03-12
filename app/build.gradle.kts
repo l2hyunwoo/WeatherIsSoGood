@@ -3,6 +3,7 @@ plugins {
     id("kotlin-android")
     id("kotlin-kapt")
     id("dagger.hilt.android.plugin")
+    id("kotlin-parcelize")
 }
 
 android {
@@ -15,6 +16,8 @@ android {
         targetSdkVersion(Apps.targetSdk)
         versionCode(Apps.versionCode)
         versionName(Apps.versionName)
+        buildConfigField("String", "WEATHER_API_KEY", properties["WEATHER_API_KEY"].toString())
+        buildConfigField("String", "WEATHER_BASE_URL", properties["WEATHER_BASE_URL"].toString())
 
         testInstrumentationRunner("androidx.test.runner.AndroidJUnitRunner")
     }
@@ -60,6 +63,12 @@ dependencies {
     implementation(AndroidXDependencies.viewModelKtx)
     implementation(AndroidXDependencies.activityKtx)
     implementation(AndroidXDependencies.fragmentKtx)
+
+    // Retrofit & OkHttp
+    implementation(ThirdPartyDependencies.okHttp)
+    implementation(ThirdPartyDependencies.okHttpInterceptor)
+    implementation(ThirdPartyDependencies.retrofit)
+    implementation(ThirdPartyDependencies.retrofitGsonConverter)
 
     testImplementation(TestDependencies.jUnit)
     androidTestImplementation(TestDependencies.androidTest)

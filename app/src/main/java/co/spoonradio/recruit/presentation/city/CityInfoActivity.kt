@@ -41,6 +41,7 @@ class CityInfoActivity : BindingActivity<ActivityCityInfoBinding>(R.layout.activ
         return object : CityAdapter.OnClickListener {
             override fun itemClickListener(city: City) {
                 val intent = Intent(this@CityInfoActivity, DetailActivity::class.java)
+                intent.putExtra("city", city)
                 startActivity(intent)
             }
         }

@@ -37,4 +37,10 @@ object ClassPathPlugins {
 
 object ThirdPartyDependencies {
     const val gson = "com.google.code.gson:gson:${Versions.gson_version}"
+    const val okHttp = "com.squareup.okhttp3:okhttp:${Versions.okHttp_version}"
+    const val okHttpInterceptor =
+        "com.squareup.okhttp3:logging-interceptor:${Versions.okHttp_version}"
+    const val retrofit = "com.squareup.retrofit2:retrofit:${Versions.retrofit_version}"
+    const val retrofitGsonConverter =
+        "com.squareup.retrofit2:converter-gson:${Versions.retrofit_version}"
 }

@@ -11,6 +11,8 @@ object Versions {
     const val activity_ktx = "1.2.1"
     const val fragment_ktx = "1.3.1"
     const val gson_version = "2.8.6"
+    const val okHttp_version = "4.7.2"
+    const val retrofit_version = "2.9.0"
 
     const val gradle_version = "4.1.2"
 
