@@ -68,6 +68,16 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/co/spoonradio/recruit/data/repository/CityRepository.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/co/spoonradio/recruit/data/repository/CityRepositoryImpl.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/app/src/main/java/co/spoonradio/recruit/di/DataSourceModule.kt">
           <value>
             <set />
@@ -78,12 +88,27 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/co/spoonradio/recruit/di/RepositoryModule.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/app/src/main/java/co/spoonradio/recruit/presentation/MainActivity.kt">
           <value>
             <set />
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/app/src/main/java/co/spoonradio/recruit/presentation/detail/DetailActivity.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/co/spoonradio/recruit/presentation/search/CityInfoActivity.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/co/spoonradio/recruit/presentation/search/CityViewModel.kt">
           <value>
             <set />
           </value>
