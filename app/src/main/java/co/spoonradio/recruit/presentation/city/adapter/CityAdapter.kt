@@ -10,11 +10,14 @@ import co.spoonradio.recruit.R
 import co.spoonradio.recruit.data.entity.City
 import co.spoonradio.recruit.databinding.ItemCityInfoBinding
 
-class CityAdapter : ListAdapter<City, CityAdapter.CityViewHolder>(CityDiffUtil) {
-    class CityViewHolder(private val binding: ItemCityInfoBinding) :
+class CityAdapter(
+    private val onClickListener: OnClickListener
+) : ListAdapter<City, CityAdapter.CityViewHolder>(CityDiffUtil) {
+    inner class CityViewHolder(private val binding: ItemCityInfoBinding) :
         RecyclerView.ViewHolder(binding.root) {
         fun bind(city: City) {
             binding.city = city
+            binding.root.setOnClickListener { onClickListener.itemClickListener(city) }
         }
     }
 
@@ -35,5 +38,9 @@ class CityAdapter : ListAdapter<City, CityAdapter.CityViewHolder>(CityDiffUtil) 
 
         override fun areContentsTheSame(oldItem: City, newItem: City): Boolean =
             oldItem == newItem
+    }
+
+    interface OnClickListener {
+        fun itemClickListener(city: City)
     }
 }
