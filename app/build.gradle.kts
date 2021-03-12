@@ -56,6 +56,9 @@ dependencies {
     // Gson
     implementation(ThirdPartyDependencies.gson)
 
+    // ViewModel KTX
+    implementation(AndroidXDependencies.viewModelKtx)
+
     testImplementation(TestDependencies.jUnit)
     androidTestImplementation(TestDependencies.androidTest)
     androidTestImplementation(TestDependencies.espresso)

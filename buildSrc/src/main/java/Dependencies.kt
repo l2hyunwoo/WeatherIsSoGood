@@ -8,6 +8,8 @@ object AndroidXDependencies {
     const val constraintLayout =
         "androidx.constraintlayout:constraintlayout:${Versions.constraint_layout_version}"
     const val hilt = "com.google.dagger:hilt-android:${Versions.hilt_version}"
+    const val viewModelKtx =
+        "androidx.lifecycle:lifecycle-viewmodel-ktx:${Versions.lifecycle_ktx_version}"
 }
 
 object TestDependencies {
