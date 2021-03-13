@@ -13,6 +13,7 @@ object Versions {
     const val gson_version = "2.8.6"
     const val okHttp_version = "4.7.2"
     const val retrofit_version = "2.9.0"
+    const val glide_version = "4.12.0"
 
     const val gradle_version = "4.1.2"
 

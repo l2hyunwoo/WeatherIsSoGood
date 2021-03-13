@@ -70,6 +70,9 @@ dependencies {
     implementation(ThirdPartyDependencies.retrofit)
     implementation(ThirdPartyDependencies.retrofitGsonConverter)
 
+    // Glide
+    implementation(ThirdPartyDependencies.glide)
+
     testImplementation(TestDependencies.jUnit)
     androidTestImplementation(TestDependencies.androidTest)
     androidTestImplementation(TestDependencies.espresso)
