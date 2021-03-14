@@ -44,5 +44,5 @@ object ThirdPartyDependencies {
     const val retrofitGsonConverter =
         "com.squareup.retrofit2:converter-gson:${Versions.retrofit_version}"
     const val glide = "com.github.bumptech.glide:glide:${Versions.glide_version}"
-    const val lottie = "com.airbnb.android:lottie:$${Versions.lottie_version}"
+    const val lottie = "com.airbnb.android:lottie:${Versions.lottie_version}"
 }
