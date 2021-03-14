@@ -9,4 +9,9 @@ class CityRepositoryImpl @Inject constructor(
 ) : CityRepository {
     override suspend fun getCityData(): List<City> =
         dataSource.fetchCityInfo()
+
+    override suspend fun searchCities(query: String): List<City> =
+        dataSource.fetchCityInfo()
+            .filter { it.name.contains(query, true) }
+            .toList()
 }

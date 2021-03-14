@@ -63,6 +63,7 @@ dependencies {
     implementation(AndroidXDependencies.viewModelKtx)
     implementation(AndroidXDependencies.activityKtx)
     implementation(AndroidXDependencies.fragmentKtx)
+    implementation(AndroidXDependencies.liveDataKtx)
 
     // Retrofit & OkHttp
     implementation(ThirdPartyDependencies.okHttp)

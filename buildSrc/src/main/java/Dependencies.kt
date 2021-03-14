@@ -14,6 +14,8 @@ object AndroidXDependencies {
         "androidx.activity:activity-ktx:${Versions.activity_ktx}"
     const val fragmentKtx =
         "androidx.fragment:fragment-ktx:${Versions.fragment_ktx}"
+    const val liveDataKtx =
+        "androidx.lifecycle:lifecycle-livedata-ktx:${Versions.lifecycle_ktx_version}"
 }
 
 object TestDependencies {
