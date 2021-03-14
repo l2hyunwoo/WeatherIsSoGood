@@ -16,35 +16,14 @@
             android:id="@+id/tab_city_menu"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toTopOf="parent">
-
-            <com.google.android.material.tabs.TabItem
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="LIST" />
-
-            <com.google.android.material.tabs.TabItem
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="SEARCH" />
-        </com.google.android.material.tabs.TabLayout>
+            app:layout_constraintTop_toTopOf="parent" />
 
         <androidx.viewpager2.widget.ViewPager2
             android:id="@+id/vp_city_menu"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/rv_city_list" />
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rv_city_list"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:orientation="vertical"
-            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tab_city_menu"
-            tools:listitem="@layout/item_city_info" />
+            app:layout_constraintTop_toBottomOf="@+id/tab_city_menu" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
