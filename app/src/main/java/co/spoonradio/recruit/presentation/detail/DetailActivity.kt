@@ -2,8 +2,6 @@ package co.spoonradio.recruit.presentation.detail
 
 import android.graphics.Color
 import android.os.Bundle
-import android.util.Log
-import android.widget.Toast
 import androidx.activity.viewModels
 import co.spoonradio.recruit.R
 import co.spoonradio.recruit.base.BindingActivity
@@ -21,13 +19,15 @@ class DetailActivity : BindingActivity<ActivityDetailBinding>(R.layout.activity_
         val cityInfo = intent.getParcelableExtra<City>("city")
         require(cityInfo != null) { "CityInfo is Null" }
         initView(cityInfo)
-        subscibeData()
+        subscribeData()
     }
 
-    private fun subscibeData() {
+    private fun subscribeData() {
         with(weatherViewModel) {
             weatherInfo.observe(this@DetailActivity) {
-                Toast.makeText(this@DetailActivity, it.sys.country, Toast.LENGTH_SHORT).show()
+                binding.weather = it
+                binding.forecast = it.weather[0]
+                binding.executePendingBindings()
             }
         }
     }
