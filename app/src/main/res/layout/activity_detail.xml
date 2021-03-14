@@ -5,6 +5,13 @@
 
     <data>
 
+        <variable
+            name="weather"
+            type="co.spoonradio.recruit.data.entity.Weather" />
+
+        <variable
+            name="forecast"
+            type="co.spoonradio.recruit.data.entity.Weather.Forecast" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -12,5 +19,111 @@
         android:layout_height="match_parent"
         tools:context=".presentation.detail.DetailActivity">
 
+        <TextView
+            android:id="@+id/txt_detail_city"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            android:text="@{weather.name}"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="ZAKIGANJ" />
+
+        <TextView
+            android:id="@+id/txt_detail_country"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@{weather.sys.country}"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="@+id/txt_detail_city"
+            app:layout_constraintStart_toStartOf="@+id/txt_detail_city"
+            app:layout_constraintTop_toBottomOf="@+id/txt_detail_city"
+            tools:text="CHINA" />
+
+        <ImageView
+            android:id="@+id/img_detail_weather"
+            android:layout_width="200dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="20dp"
+            android:scaleType="fitCenter"
+            app:layout_constraintDimensionRatio="1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_detail_country"
+            app:setWeatherIcon="@{forecast.icon}"
+            tools:src="@drawable/ic_sun_sample" />
+
+        <LinearLayout
+            android:id="@+id/linear_detail_weather"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/img_detail_weather">
+
+            <TextView
+                android:id="@+id/txt_detail_weather_param"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{forecast.main}"
+                android:textSize="36sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/img_detail_weather"
+                tools:text="Clear" />
+
+            <TextView
+                android:id="@+id/txt_detail_temperature"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:textSize="20sp"
+                app:setCelsiusTemperature="@{weather.main.temp}"
+                tools:text="12.3°C" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/linear_detail_temperature"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="@+id/linear_detail_weather"
+            app:layout_constraintStart_toStartOf="@+id/linear_detail_weather"
+            app:layout_constraintTop_toBottomOf="@id/linear_detail_weather">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_arrow_upward" />
+
+            <TextView
+                android:id="@+id/txt_detail_max_temp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:setCelsiusTemperature="@{weather.main.tempMax}"
+                tools:text="18.3°C" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:src="@drawable/ic_arrow_downward" />
+
+            <TextView
+                android:id="@+id/txt_detail_min_temp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:setCelsiusTemperature="@{weather.main.tempMin}"
+                tools:text="8.2°C" />
+        </LinearLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
