@@ -16,8 +16,6 @@ android {
         targetSdkVersion(Apps.targetSdk)
         versionCode(Apps.versionCode)
         versionName(Apps.versionName)
-        buildConfigField("String", "WEATHER_API_KEY", properties["WEATHER_API_KEY"].toString())
-        buildConfigField("String", "WEATHER_BASE_URL", properties["WEATHER_BASE_URL"].toString())
 
         testInstrumentationRunner("androidx.test.runner.AndroidJUnitRunner")
     }
@@ -72,6 +70,9 @@ dependencies {
 
     // Glide
     implementation(ThirdPartyDependencies.glide)
+
+    // Lottie
+    implementation(ThirdPartyDependencies.lottie)
 
     testImplementation(TestDependencies.jUnit)
     androidTestImplementation(TestDependencies.androidTest)
