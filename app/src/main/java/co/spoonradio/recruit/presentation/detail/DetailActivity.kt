@@ -2,8 +2,6 @@ package co.spoonradio.recruit.presentation.detail
 
 import android.graphics.Color
 import android.os.Bundle
-import android.util.Log
-import android.widget.Toast
 import androidx.activity.viewModels
 import co.spoonradio.recruit.R
 import co.spoonradio.recruit.base.BindingActivity
@@ -14,6 +12,7 @@ import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
 class DetailActivity : BindingActivity<ActivityDetailBinding>(R.layout.activity_detail) {
+    private val loadingDialogFragment by lazy { LoadingDialogFragment() }
     private val weatherViewModel: WeatherViewModel by viewModels()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -21,18 +20,28 @@ class DetailActivity : BindingActivity<ActivityDetailBinding>(R.layout.activity_
         val cityInfo = intent.getParcelableExtra<City>("city")
         require(cityInfo != null) { "CityInfo is Null" }
         initView(cityInfo)
-        subscibeData()
+        subscribeData()
     }
 
-    private fun subscibeData() {
+    private fun subscribeData() {
         with(weatherViewModel) {
             weatherInfo.observe(this@DetailActivity) {
-                Toast.makeText(this@DetailActivity, it.sys.country, Toast.LENGTH_SHORT).show()
+                binding.weather = it
+                binding.forecast = it.weather[0]
+                binding.executePendingBindings()
             }
+            isLoading.observe(this@DetailActivity) { setLoadingDialogVisibility(it) }
         }
     }
 
     private fun initView(city: City) {
         weatherViewModel.getWeatherOf(city.id)
+    }
+
+    private fun setLoadingDialogVisibility(visible: Boolean) {
+        when(visible) {
+            true -> loadingDialogFragment.show(supportFragmentManager, "loader")
+            else -> loadingDialogFragment.dismissAllowingStateLoss()
+        }
     }
 }
