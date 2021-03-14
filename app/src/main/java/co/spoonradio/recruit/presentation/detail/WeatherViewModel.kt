@@ -17,11 +17,17 @@ class WeatherViewModel @Inject constructor(
     private val _weatherInfo = MutableLiveData<Weather>()
     val weatherInfo: LiveData<Weather>
         get() = _weatherInfo
+    private val _isLoading = MutableLiveData(true)
+    val isLoading: LiveData<Boolean>
+        get() = _isLoading
 
     fun getWeatherOf(id: Int) {
         viewModelScope.launch {
             runCatching { weatherRepository.getWeatherOf(id) }
-                .onSuccess { _weatherInfo.value = it }
+                .onSuccess {
+                    _weatherInfo.value = it
+                    _isLoading.value = false
+                }
                 .onFailure { it.printStackTrace() }
         }
     }

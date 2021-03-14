@@ -12,6 +12,7 @@ import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
 class DetailActivity : BindingActivity<ActivityDetailBinding>(R.layout.activity_detail) {
+    private val loadingDialogFragment by lazy { LoadingDialogFragment() }
     private val weatherViewModel: WeatherViewModel by viewModels()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -29,10 +30,18 @@ class DetailActivity : BindingActivity<ActivityDetailBinding>(R.layout.activity_
                 binding.forecast = it.weather[0]
                 binding.executePendingBindings()
             }
+            isLoading.observe(this@DetailActivity) { setLoadingDialogVisibility(it) }
         }
     }
 
     private fun initView(city: City) {
         weatherViewModel.getWeatherOf(city.id)
+    }
+
+    private fun setLoadingDialogVisibility(visible: Boolean) {
+        when(visible) {
+            true -> loadingDialogFragment.show(supportFragmentManager, "loader")
+            else -> loadingDialogFragment.dismissAllowingStateLoss()
+        }
     }
 }

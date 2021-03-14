@@ -29,20 +29,18 @@
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:text="ZAKIGANJ" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/txt_detail_country"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:text="@{weather.sys.country}"
+            android:text="@{`Country Code: ` + weather.sys.country}"
             android:textSize="12sp"
             app:layout_constraintEnd_toEndOf="@+id/txt_detail_city"
             app:layout_constraintStart_toStartOf="@+id/txt_detail_city"
-            app:layout_constraintTop_toBottomOf="@+id/txt_detail_city"
-            tools:text="CHINA" />
+            app:layout_constraintTop_toBottomOf="@+id/txt_detail_city" />
 
         <ImageView
             android:id="@+id/img_detail_weather"
@@ -54,8 +52,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/txt_detail_country"
-            app:setWeatherIcon="@{forecast.icon}"
-            tools:src="@drawable/ic_sun_sample" />
+            app:setWeatherIcon="@{forecast.icon}" />
 
         <LinearLayout
             android:id="@+id/linear_detail_weather"
@@ -75,8 +72,7 @@
                 android:textSize="36sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/img_detail_weather"
-                tools:text="Clear" />
+                app:layout_constraintTop_toBottomOf="@+id/img_detail_weather" />
 
             <TextView
                 android:id="@+id/txt_detail_temperature"
@@ -84,8 +80,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="12dp"
                 android:textSize="20sp"
-                app:setCelsiusTemperature="@{weather.main.temp}"
-                tools:text="12.3°C" />
+                app:setCelsiusTemperature="@{weather.main.temp}" />
         </LinearLayout>
 
 
@@ -109,8 +104,7 @@
                 android:id="@+id/txt_detail_max_temp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:setCelsiusTemperature="@{weather.main.tempMax}"
-                tools:text="18.3°C" />
+                app:setCelsiusTemperature="@{weather.main.tempMax}" />
 
             <ImageView
                 android:layout_width="wrap_content"
@@ -122,8 +116,7 @@
                 android:id="@+id/txt_detail_min_temp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:setCelsiusTemperature="@{weather.main.tempMin}"
-                tools:text="8.2°C" />
+                app:setCelsiusTemperature="@{weather.main.tempMin}" />
         </LinearLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
