@@ -14,13 +14,13 @@ class CityDataSourceImpl @Inject constructor(
     override suspend fun fetchCityInfo(): List<City> {
         return withContext(Dispatchers.IO) {
             val cityTypeInfo = object : TypeToken<List<City>>() {}.type
-            val jsonString = runCatching {
+            val cityListJson = runCatching {
                 context.assets
                     .open("citylist.json")
                     .bufferedReader()
                     .use { it.readText() }
             }
-            Gson().fromJson(jsonString.getOrNull(), cityTypeInfo)
+            Gson().fromJson(cityListJson.getOrNull(), cityTypeInfo)
         }
     }
 }

@@ -16,6 +16,8 @@
             android:id="@+id/tab_city_menu"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            app:tabIndicatorColor="@color/spoon_red"
+            app:tabSelectedTextColor="@color/spoon_red"
             app:layout_constraintTop_toTopOf="parent" />
 
         <androidx.viewpager2.widget.ViewPager2
